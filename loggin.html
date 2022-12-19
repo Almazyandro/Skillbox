@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>Logg in</title>
+	<style type="text/css">
+		
+		html{
+			font-size: 16px;
+			font-family: "Tahoma","Graphic",sans-serif;
+		}
+		.skill{
+			position: absolute;
+			left: 5rem;
+			top: 2rem;
+		}
+		.bigCont{
+			display: flex;
+			position: relative;
+			top: 8rem;
+		}
+		.container{
+			padding: 1rem;
+			width: 70%;
+			background-color: #f7f7f5;
+			border-radius: 0.5rem;
+			margin: auto;
+		}
+		.container2{
+			width: 100%;
+		}
+		input::placeholder{color: #444;}
+		input{
+			width: 70%;
+			height: 30px;
+			margin-left: 7%;
+			border-radius: 0.5rem;
+			border: 0.5px solid grey;
+			min-width: 120px;
+			padding: 0.7rem;
+		}
+		.images{
+			width: 90%;
+		}
+		#butSign{
+			margin-left: 7%; padding: 0.7rem; border:0; width: 75%; height: 3rem; background-color: #3d3bff; color:white; border-radius: 8px;
+		}
+		#butSign:hover{
+			background-color: #000;
+		}
+
+		@media only screen and (max-width : 800px){
+			.bigCont{
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+	<img src="skill.png" class="skill">
+	<div class="bigCont">
+		<div style="width:100%;">
+			<div class = "container">
+				<p style="text-align: center;">Войдите в свой профиль</p>
+				<form action="auth.php" method="post">
+					
+					<input type="text" maxlength="15" placeholder="Имя" name="username"><br><br>
+					<input type="password" placeholder="Пароль" name="pass"><br><br>
+					<br>
+					<button type="submit" id="butSign">Logg in</button>
+					<p style="opacity: 0.5; font-size: 13px;">Ещё нет профиля? <a href="signin.html" style="text-decoration: none; color: #3d3bff;">Зарегистрируйтесь</a> </p>
+				</form>
+		</div>
+	</div>
+		<div class="container2">
+			<h1>Узнавайте новое на Skillbox</h1>
+			<p>Авторизуйтесь, чтобы начать заниматься</p>
+			<img src="auth-login.png" class="images">
+		</div>
+	</div>
+</body>
+</html>
